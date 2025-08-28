@@ -1,38 +1,200 @@
-.App {
-  text-align: center;
+.App{
+    background: linear-gradient(#60efff54,#0061ff);
+    height: 100%;
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* * {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+ footer {
+  background-color: #26272b;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #737373;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+footer hr {
+  border-top-color: #bbb;
+  opacity: 0.5;
+  width : 95rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* footer hr.small {
+  margin: 20px 0
+} */
+
+footer h6 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 2px
 }
 
-.App-link {
-  color: #61dafb;
+footer a {
+  color: #737373;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer a:hover {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+.footer-links {
+  padding-left: 0;
+  list-style: none
+}
+
+.footer-links li {
+  display: block
+}
+
+.footer-links a {
+  color: #737373
+}
+
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+.footer-links.inline li {
+  display: inline-block
+}
+
+.category:hover{
+      box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+.logo:hover{
+    box-shadow: 3px 6px 15px 5px rgba(37, 44, 45, 0.2);
+    transform: scale(1.03);
+    transition: all 0.5s ease;
+}
+
+.card_Header:hover{
+   box-shadow: 3px 6px 15px 5px rgba(37, 44, 45, 0.2);
+}
+
+.job-Roles:hover{
+  box-shadow: 3px 6px 15px 5px rgba(37, 44, 45, 0.2);
+  transform: scale(1.03);
+  transition: all 0.5s ease;
+}
+
+.company-card:hover{
+  box-shadow: 3px 6px 15px 5px rgba(37, 44, 45, 0.2);
+}
+
+.resume{
+  background: #4c4c50;
+}
+.resume:hover{
+    background: linear-gradient(#28458a,#a0e4ec);
+}
+
+
+.resume2{
+  background: #4c4c50;
+}
+.resume2:hover{
+    background: linear-gradient(#e44d3c,#ebfafc);
+}
+
+
+.resume3{
+  background: #4c4c50;
+}
+.resume3:hover{
+    background: linear-gradient(#be4ceb,#d9f0f3);
+}
+
+.resumewriting{
+  background: #4c4c50;
+}
+
+.resumewriting:hover{
+  background: linear-gradient(#04f2ff,#d9f0f3);
+}
+
+.onlineresume{
+  background: #4c4c50;
+}
+
+.onlineresume:hover{
+  background: linear-gradient(#c0feab,#d9f0f3);
+}
+
+.Subscribe{
+  background: #767677;
+}
+
+.Subscribe:hover{
+ background: linear-gradient(#c11e38,#f7feff);
+}
+
+
+.job2{
+   background: #4c4c50;
+}
+
+.job2:hover{
+      background: linear-gradient(#9a9af6,#f7feff);
+}
+
+
+.recruiter{
+   background: #4c4c50;
+}
+
+.recruiter:hover{
+      background: linear-gradient(#7c65a9,#96d4ca);
+}
+
+
+.resume4{
+   background: #4c4c50;
+}
+
+.resume4:hover{
+      background: linear-gradient(#ffa585,#ffeda0);
+}
+
+.service:hover{
+  box-shadow: 3px 6px 15px 5px rgba(37, 44, 45, 0.2);
+  transform: scale(1.03);
+  transition: all 0.5s ease;
+}
+
+
+.services{
+    box-shadow: 3px 6px 15px 5px rgba(37, 44, 45, 0.2);
+}
+
+.view:hover{
+  box-shadow: 3px 6px 15px 5px rgba(37, 44, 45, 0.2);
+  transform: scale(1.03);
+  transition: all 0.5s ease;
+  border-radius: 15px;
+  
+}
+
+.img:hover{
+  transform: scale(1.03);
+  transition: all 0.5s ease;
+}
+
+
+.jobs:hover{
+  box-shadow: 3px 6px 15px 5px rgba(37, 44, 45, 0.2);
+  transform: scale(1.03);
+  transition: all 0.5s ease;
 }

@@ -1,0 +1,245 @@
+ <div className="col-8 d-flex align-items-center">
+                        <div className="row w-100 mt-4">
+                            {/* {[
+                                { title: 'MNCs', desc: '2.1K+ are active hiring' },
+                                { title: 'Edtech', desc: '156+ are active hiring' },
+                                { title: 'Unicorns', desc: '97+ are active hiring' },
+                                { title: 'Healthcare', desc: '606+ are active hiring' },
+                                { title: 'Internet', desc: '263+ are active hiring' },
+                                { title: 'B2C', desc: '2.4K+ are active hiring' },
+                            ].map((item, idx) => ( */}
+                                <div className="col-sm-4 mb-3" key={idx}>
+                                    <div className="card h-100">
+                                        <div className="card-body">
+                                            <h5 className="card-title">{item.title}</h5>
+                                            <p className="card-text">{item.desc}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            // ))}
+                        </div>
+                    </div>
+
+
+
+
+
+
+// Company data from Object 
+
+import React from 'react';
+import { useState } from 'react';
+
+function Companies(props) {
+    const allCards = [
+    { title: 'MNCs', text: '2.1K+ are active hiring' },
+    { title: 'Edtech', text: '156+ are active hiring' },
+    { title: 'Unicorns', text: '97+ are active hiring' },
+    { title: 'Healthcare', text: '606+ are active hiring' },
+    { title: 'Internet', text: '263+ are active hiring' },
+    { title: 'B2C', text: '2.4K+ are active hiring' },
+    { title: 'Fintech', text: '412+ are active hiring' },
+    { title: 'Startups', text: '310+ are active hiring' },
+    { title: 'Consulting', text: '1.1K+ are active hiring' },
+    { title: 'Logistics', text: '215+ are active hiring' },
+  ];
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const cardsPerPage = 5;
+
+  const indexOfLastCard = currentPage * cardsPerPage;
+  const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+  const currentCards = allCards.slice(indexOfFirstCard, indexOfLastCard);
+
+  const totalPages = Math.ceil(allCards.length / cardsPerPage);
+
+  const handlePrev = () => {
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
+  };
+
+  const handleNext = () => {
+    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
+  };
+
+    return (
+        <div className='container'>
+            <h1 style={{textAlign:'center',marginTop:'2rem'}}>This is Company Page</h1>
+            <h3>Top companies hiring now : </h3>
+                 <div className="container">
+      <div className="row mt-4">
+        {currentCards.map((card, index) => (
+          <div className="col-sm-2 mb-3" key={index}>
+            <div className="card h-100">
+              <div className="card-body">
+                <h5 className="card-title">{card.title}</h5>
+                <p className="card-text">{card.text}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Pagination Controls */}
+      <div className="d-flex justify-content-center mt-3">
+        <button
+          className="btn btn-outline-primary me-2"
+          onClick={handlePrev}
+          disabled={currentPage === 1}
+        >
+          Previous
+        </button>
+        <span className="align-self-center">Page {currentPage} of {totalPages}</span>
+        <button
+          className="btn btn-outline-primary ms-2"
+          onClick={handleNext}
+          disabled={currentPage === totalPages}
+        >
+          Next
+        </button>
+      </div>    
+    </div>
+        </div>
+    );
+}
+
+export default Companies;
+
+
+
+
+
+
+
+
+
+if you want an Slider then 
+
+import React, { useState } from 'react';
+
+const Companies = () => {
+  const companyData = [
+    { title: 'MNCs', text: '2.1K+ are active hiring' },
+    { title: 'Edtech', text: '156+ are active hiring' },
+    { title: 'Unicorns', text: '97+ are active hiring' },
+    { title: 'Healthcare', text: '606+ are active hiring' },
+    { title: 'Internet', text: '263+ are active hiring' },
+    { title: 'B2C', text: '2.4K+ are active hiring' },
+    { title: 'Fintech', text: '1.1K+ are active hiring' },
+    { title: 'Startups', text: '812+ are active hiring' },
+    { title: 'Logistics', text: '394+ are active hiring' },
+  ];
+
+  const itemsPerPage = 5;
+  const [startIndex, setStartIndex] = useState(0);
+
+  const handleNext = () => {
+    if (startIndex + itemsPerPage < companyData.length) {
+      setStartIndex(startIndex + itemsPerPage);
+    }
+  };
+
+  const handlePrev = () => {
+    if (startIndex - itemsPerPage >= 0) {
+      setStartIndex(startIndex - itemsPerPage);
+    }
+  };
+
+  const visibleCompanies = companyData.slice(startIndex, startIndex + itemsPerPage);
+
+  return (
+    <div className='container'>
+      <h1 style={{ textAlign: 'center', marginTop: '2rem' }}>This is Company Page</h1>
+      <h3 className="mt-4">Top companies hiring now:</h3>
+
+      <div className="d-flex align-items-center justify-content-between mt-3">
+        <button
+          className="btn btn-outline-primary me-2"
+          onClick={handlePrev}
+          disabled={startIndex === 0}
+        >
+          Prev
+        </button>
+
+        <div className="d-flex flex-row overflow-hidden w-100" style={{ gap: '1rem' }}>
+          {visibleCompanies.map((company, index) => (
+            <div className="card" key={index} style={{ minWidth: '11rem', flex: '1' }}>
+              <div className="card-body">
+                <h5 className="card-title">{company.title}</h5>
+                <p className="card-text">{company.text}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <button
+          className="btn btn-outline-primary ms-2"
+          onClick={handleNext}
+          disabled={startIndex + itemsPerPage >= companyData.length}
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Companies;
+
+
+
+
+
+< ------------  Services Api ------------ >
+
+// const services = [
+//     {
+//         id: "1",
+//         img : "https://i.pinimg.com/736x/33/64/d0/3364d010b370943c36f1faac890b74bc.jpg",
+//         topics: "RESUME DISPLAY",
+//         subject1:"Increase your Profile Visibility to recruiters up to 3 times.",
+//         subject2:"Get a Featured Profile, Stand out and get noticed in recruiter eyes.",
+//         rate:"890",
+//         months:"1",
+//     },
+//     {
+//         id: "2",
+//         img : "https://img.freepik.com/premium-vector/man-employee-thumbs-up-with-laptop-flat-vector_621660-7014.jpg?semt=ais_hybrid&w=740",
+//         topics: "PRIORITY APPLICANT",
+//         subject1:"Be a Priority Applicant & increase your chance of getting a call.",
+//         subject2:"Be the first one to apply and catch recruiter attention.Don't miss your chance!",
+//         rate:"971",
+//         months:"3",
+//     },
+//     {
+//         id: "3",
+//         img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS__T6zQhMnRDx304a1aA0h7fAYMUqWAZj6xv0bPoNPUUKSO-w9MOwNhRT6-xyBZpnXu60&usqp=CAU",
+//         topics: "AI MOCK INTERVIEW",
+//         subject1:"Personalised AI driven mock interviews for your profile.",
+//         subject2:"Designed to streamline your interview preparation effortlessly.Try for free now!",
+//         rate:"239",
+//         months:"3",
+//     },
+// ]
+
+// const services_1 = [
+//     {
+        
+//         id: "4",
+//         img : "https://i.pinimg.com/736x/33/64/d0/3364d010b370943c36f1faac890b74bc.jpg",
+//         topics: "RESUME WRITING",
+//         subject1:"Standout from the crowd with our professionally written Resume by expert.",
+//         subject2:"Resume that highlights your strengths and showcase your experience.",
+//         subject3: ["Text Resume", "Visual Resume" , "Resume Score"],
+//         rate:"1653",
+//         months:"1",
+//     },
+//     {
+//         id: "5",
+//         img : "https://i.pinimg.com/736x/33/64/d0/3364d010b370943c36f1faac890b74bc.jpg",
+//         topics: "ONLINE RESUME MAKER",
+//         subject1:"Create a job-winning resume with our simple resume maker"
+//     },
+   
+// ]
+
+// export default services;
