@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router";
-import '../App.css'
+import '../App.css';
 
 function NavBar(props) {
     return (
@@ -9,7 +9,7 @@ function NavBar(props) {
                 <div className="container-fluid" >
                     <div style={{height:'3rem',width:'3rem', borderRadius:'50%',overflow: 'hidden', boxShadow: '2px 2px 2px gray', border:'2px solid white'}}>
                         {/* <img src="/Logo2.png" style={{height:'4rem',width:'4rem',backgroundSize:'cover',backgroundPosition:'top left', transform:'translateX(-13%) translateY(-15%)',backgroundRepeat:'no-repeat',margin:'0' }} alt="Job Dekho"></img>  */}
-                        <img src={`${process.env.PUBLIC_URL}/Logo2.png`} style={{height:'4rem',width:'4rem',backgroundSize:'cover',backgroundPosition:'top left', transform:'trtranslateY(-15%)',backgroundRepeat:'no-repeat',margin:'0' }} alt="Job Dekho"/>       
+                        <img src={`${process.env.PUBLIC_URL}/Logo2.png`} style={{height:'4rem',width:'4rem',backgroundSize:'cover',backgroundPosition:'top left', transform:'translateY(-15%)',backgroundRepeat:'no-repeat',margin:'0' }} alt="Job Dekho"/>       
                     </div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
