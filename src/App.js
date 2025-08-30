@@ -5,7 +5,7 @@ import Error from './components/Error';
 import Footer from './components/Footer';
 import Job from './components/Job';
 import NavBar from './components/NavBar';
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { HashRouter , Routes, Route } from 'react-router';
 import Services from './components/Services';
 import Home from './components/Home';
 
@@ -14,7 +14,7 @@ function App() {
   
 
   return (
-    <BrowserRouter>
+    <HashRouter>
         <div className="App">
             <NavBar/>
               <Routes>
@@ -28,7 +28,7 @@ function App() {
               </Routes>
             <Footer/>
         </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
