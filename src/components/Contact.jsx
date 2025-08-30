@@ -89,7 +89,7 @@ function Contact(props) {
                 {/* LEFT COLUMN */}
                 <div className="col-4 d-flex flex-column align-items-start justify-content-start pt-3 mt-4">
                     <p style={{ marginBottom: '1rem' }}>If you have any Query, feel free to reach out to us.</p>
-                    <img src="/Job_Dekho.png" alt="Job Dekho" style={{ height: '10rem', width: '12rem', borderRadius: '10px', objectFit: 'cover' }} />
+                    <img src={`${process.env.PUBLIC_URL}/Job_Dekho.png`} alt="Job Dekho" style={{ height: '10rem', width: '12rem', borderRadius: '10px', objectFit: 'cover' }} />
                     <h6 style={{ fontSize: '1.4rem', marginTop: '1rem', textAlign: 'left' }}> Fill out the form and our <br /> team will reach out to you <br /> within 1-2 business days.</h6>
                     <p style={{ fontSize: '0.9rem', textAlign: 'left' }}> Click the button below to schedule a meeting with us.</p>
                     <button className="btn btn-outline-light" style={{ background: 'linear-gradient(#471069,#b57bee)', width: '12rem' }} type="submit">Talk with us</button>

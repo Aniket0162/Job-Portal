@@ -31,7 +31,7 @@ function Home(props) {
                     <button className="btn btn-outline-light" type="submit" style={{ margin: '0.2rem', marginLeft: '0.7rem', background: 'linear-gradient(#f4d444,#f86ca7)' }}>Start for free</button>
                 </div>
                 {/* Image on the right */}
-                <img src="/Job_Dekho_2.png" alt="Mock Interview" style={{ height: '10rem', borderRadius: '1rem' }} />
+                <img src={`${process.env.PUBLIC_URL}/Job_Dekho_2.png`} alt="Mock Interview" style={{ height: '10rem', borderRadius: '1rem' }} />
             </div>
 
 
@@ -231,7 +231,7 @@ function Home(props) {
 
                     {/* LEFT COLUMN */}
                     <div className="col-4 d-flex flex-column align-items-center justify-content-start pt-4">
-                        <img src="/Job_Dekho.png" alt="Job Dekho" style={{ height: '10rem', width: '12rem', borderRadius: '10px', objectFit: 'cover' }} className="img"/>
+                        <img src={`${process.env.PUBLIC_URL}/Job_Dekho.png`} alt="Job Dekho" style={{ height: '10rem', width: '12rem', borderRadius: '10px', objectFit: 'cover' }} className="img"/>
                         <h5 style={{ fontSize: '1.4rem', marginTop: '1rem', textAlign: 'left' }}>
                             Discover jobs across <br /> popular roles
                         </h5>
