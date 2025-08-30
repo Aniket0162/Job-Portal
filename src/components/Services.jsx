@@ -30,7 +30,8 @@ function Services(props) {
                     </div>
 
                      <div className="service card me-3" style={{ borderRadius: '0' }}>
-                        <img src="../Emp.png" className="resume2 card-img-top" alt="PRIORITY APPLICANT" style={{ height: '13rem', objectFit: 'contain' }} />
+                        {/* <img src="../Emp.png" className="resume2 card-img-top" alt="PRIORITY APPLICANT" style={{ height: '13rem', objectFit: 'contain' }} /> */}
+                        <img src={`${process.env.PUBLIC_URL}/Emp.png`} className="resume2 card-img-top" alt="PRIORITY APPLICANT" style={{ height: '13rem', objectFit: 'contain' }} />
                         <div className="card-body">
                             <h5 className="card-title">PRIORITY APPLICANT</h5>
                             <h5 className="card-text"><small className="text-body-secondary"> Be a Priority Applicant & increase your chance of getting a call. </small>
@@ -44,7 +45,8 @@ function Services(props) {
                     </div>
 
                         <div className="service card me-3" style={{ borderRadius: '0' }}>
-                        <img src="../Ai_Mock_Interview.png" className="resume3 card-img-top" alt="Ai Mock Interview" style={{ height: '14rem', objectFit: 'contain' }} />
+                        {/* <img src="../Ai_Mock_Interview.png" className="resume3 card-img-top" alt="Ai Mock Interview" style={{ height: '14rem', objectFit: 'contain' }} /> */}
+                        <img src={`${process.env.PUBLIC_URL}/Ai_Mock_Interview.png`} className="resume3 card-img-top" alt="Ai Mock Interview" style={{ height: '14rem', objectFit: 'contain' }} />
                         <div className="card-body">
                             <h5 className="card-title">AI Mock Interview</h5>
                             <h5 className="card-text"><small className="text-body-secondary">Personalised AI driven mock interviews for your profile. </small>
@@ -66,7 +68,8 @@ function Services(props) {
                             <div className="service card" style={{ maxWidth: "100%", borderRadius: '0' }}>
                                 <div className="row g-0 h-100">
                                     <div className="resumewriting col-md-5" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                        <img src="../Resume_Writting.png" className="img-fluid-start" alt="RESUME WRITING" style={{ height: '100%', width: '100%', clipPath: 'inset(0 4.7rem)' }} />
+                                        {/* <img src="../Resume_Writting.png" className="img-fluid-start" alt="RESUME WRITING" style={{ height: '100%', width: '100%', clipPath: 'inset(0 4.7rem)' }} /> */}
+                                        <img src={`${process.env.PUBLIC_URL}/Resume_Writting.png`} className="img-fluid-start" alt="RESUME WRITING" style={{ height: '100%', width: '100%', clipPath: 'inset(0 4.7rem)' }} />
                                     </div>
                                     <div className="col-md-7">
                                         <div className=" card-body">
@@ -85,7 +88,8 @@ function Services(props) {
                         {/* Section 2 - Right Side */}
                         <div className="col">
                             <div className="service card" style={{ width: "100%", borderRadius: '0' }}>
-                                <img src="../AI_resume_writingew.png" className="onlineresume card-img-top" alt="ONLINE RESUME MAKER" style={{ height: '9rem', objectFit: 'contain' }} />
+                                {/* <img src="../AI_resume_writingew.png" className="onlineresume card-img-top" alt="ONLINE RESUME MAKER" style={{ height: '9rem', objectFit: 'contain' }} /> */}
+                                <img src={`${process.env.PUBLIC_URL}/AI_resume_writingew.png`} className="onlineresume card-img-top" alt="ONLINE RESUME MAKER" style={{ height: '9rem', objectFit: 'contain' }} />
                                 <div className="card-body">
                                     <h5 className="card-text">
                                         ONLINE RESUME MAKER
@@ -108,7 +112,9 @@ function Services(props) {
                             <div className="row g-0">
                                 {/* Left Side Image */}
                                 <div className="Subscribe col-md-4 d-flex justify-content-center align-items-center" style={{ borderRight: '2px solid #767677' }}>
-                                    <img src="../SUBSCRIBE.png" className="img-fluid" alt="Subscribe" style={{ height: '220px', width: '80%' }} />
+                                    {/* <img src="../SUBSCRIBE.png" className="img-fluid" alt="Subscribe" style={{ height: '220px', width: '80%' }} /> */}
+                                <img src={`${process.env.PUBLIC_URL}/SUBSCRIBE.png`} className="img-fluid" alt="Subscribe" style={{ height: '220px', width: '80%' }} />
+
                                 </div>
 
                                 {/* Right Side Content */}
@@ -157,7 +163,8 @@ function Services(props) {
 
                 <div className="card-group p-2">
                     <div className="service card me-3" style={{ borderRadius: '0' }}>
-                        <img src="../JOBS_FOR_YOU.png" className="job2 card-img-top" alt="JOBS FOR YOU" style={{ height: '13rem', objectFit: 'contain' }} />
+                        {/* <img src="../JOBS_FOR_YOU.png" className="job2 card-img-top" alt="JOBS FOR YOU" style={{ height: '13rem', objectFit: 'contain' }} /> */}
+                        <img src={`${process.env.PUBLIC_URL}/JOBS_FOR_YOU.png`} className="job2 card-img-top" alt="JOBS FOR YOU" style={{ height: '13rem', objectFit: 'contain' }} />
                         <div className="card-body">
                             <h5 className="card-title">JOBS FOR YOU</h5>
                             <h5 className="card-text"><small className="text-body-secondary">Stand out as an Early Applicant with instant access to jobs.</small></h5>
@@ -167,7 +174,8 @@ function Services(props) {
                         </div>
                     </div>
                     <div className="service card me-3" style={{ borderRadius: '0' }}>
-                        <img src="../RECRUITERCONNECTION.png" className="recruiter card-img-top" alt="RECRUITER CONNECTION" style={{ height: '13rem', objectFit: 'contain', width: 'auto' }} />
+                        {/* <img src="../RECRUITERCONNECTION.png" className="recruiter card-img-top" alt="RECRUITER CONNECTION" style={{ height: '13rem', objectFit: 'contain', width: 'auto' }} /> */}
+                        <img src={`${process.env.PUBLIC_URL}/RECRUITERCONNECTION.png`} className="recruiter card-img-top" alt="RECRUITER CONNECTION" style={{ height: '13rem', objectFit: 'contain', width: 'auto' }} />
                         <div className="card-body">
                             <h5 className="card-title">RECRUITER CONNECTION</h5>
                             <h5 className="card-text mt-3"><small className="text-body-secondary mt-2">Send personalized message to recruiters.</small></h5>
